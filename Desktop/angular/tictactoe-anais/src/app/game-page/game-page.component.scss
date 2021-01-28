@@ -1,0 +1,50 @@
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 400px;
+  }
+  
+  .cell {
+    position: relative;
+    flex-basis: 33%;
+    border: 1px solid #666;
+  
+    &:before {
+      content: '';
+      display: block;
+      padding-top: 100%;
+    }
+  }
+  
+  .circle, .cross {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+  }
+  
+  .circle {
+    border: 2px solid #66F;
+    border-radius: 50%;
+  }
+  
+  .cross {
+    top: 50%;
+  
+    &:before, &:after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: #F66;
+    }
+  
+    &:before {
+      transform: rotate(45deg);
+    }
+  
+    &:after {
+      transform: rotate(-45deg);
+    }
+  }
+  
