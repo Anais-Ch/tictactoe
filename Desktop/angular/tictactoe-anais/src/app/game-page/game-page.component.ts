@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Cell } from '../cell';
+
 
 @Component({
   selector: 'app-game-page',
@@ -6,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./game-page.component.scss']
 })
 export class GamePageComponent implements OnInit {
-  public grid: Array<any> =[]; //create empty array
+  public grid: Array<Cell> =[]; //create empty arrayw with cell object as type of datas
 
   private gridSize = 9; // force grid size at 9 cells
 
@@ -21,6 +23,11 @@ export class GamePageComponent implements OnInit {
    }
 
   ngOnInit(): void {
+  }
+  public clickOnCell(cell: Cell):void{
+    cell.empty=false;
+    cell.cross= true;
+
   }
 
 }

@@ -6,9 +6,9 @@
 <!--grille-->
    <div  class="grid">
 
-        <div *ngFor="let cell of grid" class="cell"><!--repete la cellule-->
+        <div *ngFor="let cell of grid" class="cell" (click)="clickOnCell(cell)"><!--repete la cellule on met (cell) à la mathode pour définir quel cellule est impactée-->
             <!--<div *ngIf="!cell.empty && cell.cross" class="circle"></div>contenu cellule avec ngIf demande 2 balise une pour circle une pour cross-->
-            <div *ngIf="!cell.empty &&" [class.cross]=cell.cross [class.circle]="cell.circle" class="circle"></div><!--contenu cellule avec ngIf + style attribute-->
+            <div *ngIf="!cell.empty" [class.cross]=cell.cross [class.circle]="cell.circle"></div><!--contenu cellule avec ngIf + style attribute-->
             <!--on donne des conditions à l'ajout du style [class.cross]="cell.cross" (sous entendu is true)-->
         </div>
    </div>

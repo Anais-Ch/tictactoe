@@ -1,5 +1,5 @@
 //create interface
-export interface cell{
+export interface Cell{
    empty : boolean;
    cross: boolean;
    circle: boolean;
