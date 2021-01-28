@@ -12,7 +12,11 @@ export class GamePageComponent implements OnInit {
 
   constructor() {
     for (let i = 0; i <this.gridSize; i++){ // force grid size at 9 cells
-      this.grid.push(null);
+      this.grid.push({
+        empty: true, // appelle les éléments de l'interface
+        cross: false,
+        circle: false,
+      });
     }
    }
 

@@ -7,7 +7,9 @@
    <div  class="grid">
 
         <div *ngFor="let cell of grid" class="cell"><!--repete la cellule-->
-            <div class="circle"></div>
+            <!--<div *ngIf="!cell.empty && cell.cross" class="circle"></div>contenu cellule avec ngIf demande 2 balise une pour circle une pour cross-->
+            <div *ngIf="!cell.empty &&" [class.cross]=cell.cross [class.circle]="cell.circle" class="circle"></div><!--contenu cellule avec ngIf + style attribute-->
+            <!--on donne des conditions à l'ajout du style [class.cross]="cell.cross" (sous entendu is true)-->
         </div>
    </div>
 
