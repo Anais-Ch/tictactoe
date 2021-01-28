@@ -1,0 +1,15 @@
+{
+  "name": "intro-npm",
+  "version": "0.1.0",
+  "description": "Learn how to use NPM",
+  "keywords": [
+    "Learn",
+    "npm"
+  ],
+  "author": "Ac",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^4.5.3",
+    "jquery": "^3.5.1"
+  }
+}
